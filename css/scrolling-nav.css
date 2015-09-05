@@ -1,0 +1,165 @@
+/*!
+ * Start Bootstrap - Scrolling Nav HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+@font-face {
+  font-family: SF;
+  src: url(../fonts/SystemSanFranciscoDisplayThin.ttf);
+}@font-face {
+  font-family: SFThin;
+  src: url(../fonts/SysteSanFranciscoDisplayUltralight.ttf);
+}
+
+
+body{
+    font-family: 'Lato', sans-serif;
+    
+    font-family: SF;
+
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+@media(min-width:767px) {
+    .navbar {
+        padding: 20px 0;
+        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+        transition: background .5s ease-in-out,padding .5s ease-in-out;
+    }
+
+    .top-nav-collapse {
+        padding: 0;
+    }
+}
+
+/* Demo Sections - You can use these as guides or delete them - the scroller will work with any sort of height, fixed, undefined, or percentage based.
+The padding is very important to make sure the scrollspy picks up the right area when scrolled to. Adjust the margin and padding of sections and children 
+of those sections to manage the look and feel of the site. */
+
+.navbar-nav a{
+    font-weight: bolder;
+}
+
+.intro-section {
+    height: auto;
+    padding-top: 150px;
+    text-align: center;
+    background: orange;
+}
+.intro-section h1 {
+    color: white;
+    text-align: center;
+     
+}
+
+#bg-portfolio1{
+    width: 100%;
+    height: auto;
+    z-index: 10;
+    background-color: orange;
+    
+}
+
+
+.about-section h1 {
+    margin-bottom: 5%;
+    text-align: center;
+}
+.about-section img{
+    float:right;
+    height: 300px;
+    text-align: center;
+    width: auto;
+    margin-right: 10%;
+
+}
+
+.contacts p{
+        
+        display: inline-block; 
+        margin-right: 2%;
+        font-size: 1em;
+    }
+/*#photo {
+    height: 300px;
+    width: auto;
+    
+}*/
+
+
+figure{
+    width:100%;
+    background-color: white;
+    margin-bottom: 10%;
+    border-radius: 10%;
+}
+figure img{
+    width:100%;
+    border-radius: 10%;
+}
+.soon{
+    padding:10% 0;
+}
+figure .btn{
+    margin-bottom: 5%;
+}
+figcaption{
+    text-align: center;
+    margin-top: 20px;
+}
+figcaption h4{
+    font-weight:bolder;
+    font-family: SFThin
+}
+.about-section {
+    height: auto;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    font-size:1.25em;
+    
+   
+    background: #eee;
+}
+
+.about-section >.container {
+	vertical-align: middle;
+}
+
+.services-section {
+    height: auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+    background: orange;
+    color: white;
+}
+
+.services-section h2 {
+
+    
+    margin-bottom: 5%;
+}
+
+.contact-section {
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 5%;
+    text-align: center;
+    background: #eee;
+}
+
+
+}
+
+/*#my {
+    
+    margin-bottom: 10%; 
+    font-size: 5em;
+}*/

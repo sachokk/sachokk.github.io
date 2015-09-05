@@ -1,0 +1,63 @@
+.intro-section {
+	
+background-color: orange;
+
+}
+.intro-section h1 {
+	color: white;
+	text-align: center;
+	font-family: 
+}
+#bg-portfolio1{
+	width: 100%;
+	height: auto;
+	z-index: 10;
+	background-color: orange;
+	
+}
+.about-section h1 {
+	margin-bottom: 5%;
+	text-align: center;
+}
+.about-section img{
+    float:right;
+    height: 300px;
+    text-align: center;
+	width: auto;
+
+}
+
+.contacts  p{
+        display: block; 
+        margin:0;
+    }
+/*#photo {
+	height: 300px;
+	width: auto;
+	
+}*/
+
+
+figure{
+    width:100%;
+    background-color: white;
+    margin-bottom: 10%;
+    border-radius: 10%;
+}
+figure img{
+    width:100%;
+    border-radius: 10%;
+}
+.soon{
+    padding:10% 0;
+}
+figure .btn{
+    margin-bottom: 5%;
+}
+figcaption{
+    text-align: center;
+    margin-top: 20px;
+}
+figcaption h4{
+    font-weight:bolder;
+    font-family: SFThin
