@@ -1,0 +1,472 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Tables</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  
+  </head>
+<body>
+<div id="wrapper">
+<div class="header">
+	<div class="switch">
+		<input type="radio" name="name" value="" id="radio-prop" onchange="toggleTab()" />
+		<label for="radio-prop" id="label-prop">Выдать</label>
+		<input type="radio" name="name" value="" id="radio-both" checked="checked" onchange="toggleTab()" />
+		<label for="radio-both" id="label-both">Все</label>
+		<input type="radio" name="name" value="" id="radio-req" onchange="toggleTab()" />
+		<label for="radio-req" id="label-req">Получить</label>
+	</div>
+</div>
+	<div class="my-container">
+		<div class="row">
+			<div class="col-md-6" id="proposition">
+			<h4 id="h-prop"> Предложения кредитов</h4>
+			<span><input type="checkbox" id="check-prop" class="checkbox"/>
+	   				<label for="check-prop">Только мои</label></span>
+			<span class="filter"><input type="checkbox" id="filter-check-prop" onclick="toggleFilter('filter-check-prop', 'filter-label-prop', 'filter-tab-prop')"/>
+									<label for="filter-check-prop" id="filter-label-prop">Фильтровать</label></span>
+			<div class="tables">
+				<div class="table-responsive" id="filter-tab-prop">
+				<table class="table-f"  >
+					<tbody >
+					<tr class="filter-labels">
+						<td class="fav"></td>
+						<td>Кредитор</td>
+						<td>Сумма</td>
+						<td>Валюта</td>
+						<td>Срок</td>
+						<td>Возврат</td>
+						<td>Ставка</td>
+					</tr>
+					<tr>
+						<td class="fav">
+							<span id="inp-prop"></span>
+						</td>
+						<td>
+						<div  class="input-tab">
+							<span class="sel" id="sel-creditor-prop"></span>			
+							</div>
+						</td>
+						<td>
+							<div  class="input-tab">
+							<span id="inp-summ-min-prop"></span>
+						</div>
+						</td>
+						<td>
+						<div  class="input-tab">
+							
+								<span id="sel-curr-prop"></span>
+								
+							
+							</div>
+						</td>
+						<td>
+							<div  class="input-tab">
+							<span id="inp-term-min-prop"></span>
+							
+							</div>
+						</td>
+						<td>
+							<div  class="input-tab">
+							<span id="inp-return-min-prop"></span>
+							
+							</div>
+						</td>
+						<td>
+							<div  class="input-tab">
+							<span id="inp-percent-min-prop"></span>
+							
+							</div>
+						</td>
+
+					</tr>
+					</tbody>
+						</table>
+						<div class="under-filter-tab">
+						<input type="button" id="clr-prop" value="Сбросить все" onclick="tfp.clearFilters();">
+					<input type="button" id="btn-prop" class="btn" value="Применить" onclick="tfp.filter();">
+				</div>
+				</div>
+				<div class="table-responsive">
+				<table class="table " id="table-prop">
+				    <thead class="thead-prop">
+				        <tr>
+				        	<th class="fav"></th>
+				            <th>Кредитор</th>
+				            <th>Сумма</th>
+				            <th>Валюта</th>
+				            <th>Срок</th>
+				            <th>Возврат</th>
+				            <th>Ставка</th>
+				        </tr>
+				    </thead>
+				    <tbody id="tbody-prop">
+				      <tr>
+				        	<td class="fav"></td>
+				            <td>Ivanov Ivan</td>
+				            <td>180</td>
+				            <td>UAH</td>
+				            <td>45</td>
+				            <td>195</td>
+				            <td>1.5</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Ivon Ivan</td>
+				            <td>1800</td>
+				            <td>EUR</td>
+				            <td>60</td>
+				            <td>1950</td>
+				            <td>2</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Test Victor</td>
+				            <td>160</td>
+				            <td>UAH</td>
+				            <td>45</td>
+				            <td>190</td>
+				            <td>3</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Markovich Alex</td>
+				            <td>110</td>
+				            <td>EUR</td>
+				            <td>45</td>
+				            <td>195</td>
+				            <td>1.5</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Stupka Petr</td>
+				            <td>180</td>
+				            <td>USD</td>
+				            <td>90</td>
+				            <td>200</td>
+				            <td>2</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Markovich Alex</td>
+				            <td>110</td>
+				            <td>EUR</td>
+				            <td>45</td>
+				            <td>195</td>
+				            <td>15</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Stupka Petr</td>
+				            <td>50</td>
+				            <td>UAH</td>
+				            <td>90</td>
+				            <td>200</td>
+				            <td>10</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Markovich Alex</td>
+				            <td>110</td>
+				            <td>USD</td>
+				            <td>45</td>
+				            <td>195</td>
+				            <td>1.5</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Stupka Petr</td>
+				            <td>180</td>
+				            <td>USD</td>
+				            <td>75</td>
+				            <td>200</td>
+				            <td>2</td>
+				        </tr>
+				         <tr>
+				        	<td class="fav"></td>
+				            <td>Fedin Andriy</td>
+				            <td>190</td>
+				            <td>UAH</td>
+				            <td>75</td>
+				            <td>200</td>
+				            <td>1.5</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Onuka Petr</td>
+				            <td>180</td>
+				            <td>USD</td>
+				            <td>75</td>
+				            <td>200</td>
+				            <td>2</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Retizniy Oleh</td>
+				            <td>180</td>
+				            <td>USD</td>
+				            <td>75</td>
+				            <td>200</td>
+				            <td>2</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Maha Petr</td>
+				            <td>180</td>
+				            <td>EUR</td>
+				            <td>75</td>
+				            <td>200</td>
+				            <td>2</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Muller Volodimir</td>
+				            <td>190</td>
+				            <td>USD</td>
+				            <td>75</td>
+				            <td>250</td>
+				            <td>4</td>
+				        </tr>
+				    </tbody>
+				</table>
+				</div>
+			</div>
+			</div>
+			<div class="col-md-6" id="request">
+				<h4 id="h-req">Запросы кредитов</h4>
+				<span><input type="checkbox" id="check-req" class="checkbox" />
+	   				<label for="check-req">Только мои</label></span>
+				<span class="filter"><input type="checkbox" id="filter-check-req" onclick="toggleFilter('filter-check-req', 'filter-label-req','filter-tab-req')"/>
+									<label for="filter-check-req" id="filter-label-req">Фильтровать</label></span>
+			
+			<div class="tables">
+				<div class="table-responsive" id="filter-tab-req">
+				<table class="table-f" >
+					<tbody >
+					<tr class="filter-labels">
+						<td class="fav"></td>
+						<td>Кредитор</td>
+						<td>Сумма</td>
+						<td>Валюта</td>
+						<td>Срок</td>
+						<td>Возврат</td>
+						<td>Ставка</td>
+					</tr>
+					<tr>
+						<td class="fav">
+							<span id="inp-req"></span>
+						</td>
+						<td>
+						<div  class="input-tab">
+							<span id="sel-creditor-req"></span>			
+							</div>
+						</td>
+						<td>
+							<div  class="input-tab">
+							<span id="inp-summ-min-req"></span>
+						</div>
+						</td>
+						<td>
+						<div  class="input-tab">
+							
+								<span id="sel-curr-req"></span>
+								
+							
+							</div>
+						</td>
+						<td>
+							<div  class="input-tab">
+							<span id="inp-term-min-req"></span>
+							
+							</div>
+						</td>
+						<td>
+							<div  class="input-tab">
+							<span id="inp-return-min-req"></span>
+							
+							</div>
+						</td>
+						<td>
+							<div  class="input-tab">
+							<span id="inp-percent-min-req"></span>
+							
+							</div>
+						</td>
+
+					</tr>
+					</tbody>
+						</table>
+						<div class="under-filter-tab">
+						<input type="button" id="clr-req" value="Сбросить все" onclick="tfr.clearFilters();">
+					<input type="button" id="btn-req" class="btn" value="Применить" onclick="tfr.filter();">
+				</div>
+				</div>
+				<div class="table-responsive">
+				<table class="table " id="table-req">
+				    <thead class="thead-req">
+				        <tr >
+				        	<th class="fav"></th>
+				            <th>Кредитор</th>
+				            <th>Сумма</th>
+				            <th>Валюта</th>
+				            <th>Срок</th>
+				            <th>Возврат</th>
+				            <th>Ставка</th>
+				        </tr>
+				    </thead>
+				    <tbody id="tbody-req">
+				      <tr>
+				        	<td class="fav"></td>
+				            <td>Ivanov Ivan</td>
+				            <td>180</td>
+				            <td>UAH</td>
+				            <td>45</td>
+				            <td>195</td>
+				            <td>1.5</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Ivon Ivan</td>
+				            <td>1800</td>
+				            <td>EUR</td>
+				            <td>60</td>
+				            <td>1950</td>
+				            <td>2</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Test Victor</td>
+				            <td>160</td>
+				            <td>UAH</td>
+				            <td>45</td>
+				            <td>190</td>
+				            <td>3</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Markovich Alex</td>
+				            <td>110</td>
+				            <td>EUR</td>
+				            <td>45</td>
+				            <td>195</td>
+				            <td>1.5</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Stupka Petr</td>
+				            <td>180</td>
+				            <td>USD</td>
+				            <td>90</td>
+				            <td>200</td>
+				            <td>2</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Markovich Alex</td>
+				            <td>110</td>
+				            <td>EUR</td>
+				            <td>45</td>
+				            <td>195</td>
+				            <td>15</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Stupka Petr</td>
+				            <td>50</td>
+				            <td>UAH</td>
+				            <td>90</td>
+				            <td>200</td>
+				            <td>10</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Markovich Alex</td>
+				            <td>110</td>
+				            <td>USD</td>
+				            <td>45</td>
+				            <td>195</td>
+				            <td>1.5</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Stupka Petr</td>
+				            <td>180</td>
+				            <td>USD</td>
+				            <td>75</td>
+				            <td>200</td>
+				            <td>2</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Fedin Andriy</td>
+				            <td>190</td>
+				            <td>UAH</td>
+				            <td>75</td>
+				            <td>200</td>
+				            <td>1.5</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Onuka Petr</td>
+				            <td>180</td>
+				            <td>USD</td>
+				            <td>75</td>
+				            <td>200</td>
+				            <td>2</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Retizniy Oleh</td>
+				            <td>180</td>
+				            <td>USD</td>
+				            <td>75</td>
+				            <td>200</td>
+				            <td>2</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Maha Petr</td>
+				            <td>180</td>
+				            <td>EUR</td>
+				            <td>75</td>
+				            <td>200</td>
+				            <td>2</td>
+				        </tr>
+				        <tr>
+				        	<td class="fav"></td>
+				            <td>Muller Volodimir</td>
+				            <td>190</td>
+				            <td>USD</td>
+				            <td >75</td>
+				            <td >250</td>
+				            <td >4</td>
+				        </tr>
+				    </tbody>
+				</table>
+				</div>
+			</div>
+			</div>
+			
+				</div>
+				</div>
+				
+
+				
+			</div>
+				
+
+		
+
+	
+<script src="js/toggle.js"></script>
+<script src="js/tablefilter/tablefilter.js"></script>
+<script src="js/filter.js"></script>
+	
+	
+  	<script type="text/javascript" src="js/table-data.js"></script>
+
+  
+</body>
+</html>
